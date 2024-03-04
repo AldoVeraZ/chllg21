@@ -1,0 +1,126 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: "Consolas";
+  margin: 0;
+  padding: 20px;
+  display: grid; /* Uso de CSS Grid en lugar de Flexbox */
+  place-items: center; /* Centra el contenido tanto horizontal como verticalmente */
+  background-color: #eaeaea;
+}
+
+/* Contenedor principal para la tarjeta y la tabla, utilizando CSS Grid */
+.container {
+  display: grid; /* Utiliza CSS Grid para el diseño del contenedor */
+  grid-template-columns: auto 1fr; /* Define dos columnas: la primera se ajusta al contenido y la segunda ocupa el resto del espacio disponible */
+  gap: 20px; /* Agrega espacio entre las columnas */
+}
+
+/* Estilos para la única tarjeta que contiene el formulario */
+.card {
+  background: #580000; /* Color de fondo para la tarjeta */
+  padding: 1.5em; /* Padding alrededor del contenido de la tarjeta */
+  border-radius: 25px; /* Bordes redondeados para la tarjeta */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para la tarjeta */
+  width: fit-content; /* Ajusta el ancho de la tarjeta al contenido */
+  margin-right: auto; /* Mueve la tarjeta hacia la izquierda tanto como sea posible */
+  margin-top: 1rem;
+}
+
+/* Estilos para el formulario dentro de la tarjeta */
+.myform {
+  display: grid; /* Uso de CSS Grid para organizar los elementos del formulario */
+  grid-template-columns: [labels] auto [controls] 1fr; /* Definición de las columnas para etiquetas y controles */
+  grid-auto-flow: row; /* Los elementos del formulario se disponen en filas */
+  gap: 0.8em; /* Espacio entre cada elemento del formulario */
+}
+
+.myform > label {
+  grid-column: labels; /* Ubicación de las etiquetas en su columna designada */
+  color: #ffffff; /* Color del texto para las etiquetas */
+}
+
+.myform > input,
+.myform > button,
+.myform > textarea {
+  grid-column: controls; /* Ubicación de los controles de entrada y botón en su columna */
+  padding: 10px; /* Padding para los controles de entrada */
+  border: none; /* Elimina el borde por defecto */
+  font-size: 16px; /* Tamaño de fuente para los controles de entrada */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  background-color: #580000; /* Fondo para los campos de texto */
+  color: white; /* Color de texto para los campos de texto */
+  border-bottom: 1px solid #b4d75d; /* Borde inferior para indicar el campo activo */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a9a9a9; /* Color del texto del placeholder */
+}
+
+button {
+  background-color: #da2528; /* Color de fondo para el botón */
+  color: #ffffff; /* Color de texto para el botón */
+  border-radius: 10px; /* Bordes redondeados para el botón */
+}
+
+button:hover {
+  cursor: pointer; /* Cambia el cursor a puntero cuando se pasa sobre el botón */
+  background-color: #319938; /* Color de fondo para el botón al pasar el mouse */
+  color: #da2528; /* Color de texto para el botón al pasar el mouse */
+}
+
+/* Estilos para la tabla de visualización de usuarios */
+.tablaUsuarios {
+  margin-top: 20px; /* Espacio arriba de la tabla */
+  width: 100%; /* Ancho completo para la tabla */
+  max-width: 1200px; /* Ancho máximo para la tabla */
+}
+
+/* Aplica bordes redondeados a la tabla y quita el borde colapsado */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px; /* Radio para toda la tabla */
+  overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+thead tr:first-child {
+  background-color: #180000;
+  color: #8b0101;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+thead tr:first-child:hover {
+  background-color: #eaeaea;
+  color: #8b0101;
+  font-weight: bolder;
+}
+
+tr:not(:first-child) {
+  background-color: #000000;
+  color: #eaeaea;
+}
+/* Aplica bordes redondeados solo a la primera y última celda del encabezado */
+th:first-child {
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+th,
+td {
+  padding: 12px; /* Padding dentro de las celdas */
+}
+
+tr:hover {
+  background-color: #eaeaea; /* Color de fondo al pasar el mouse por las filas */
+  color: #000000;
+}

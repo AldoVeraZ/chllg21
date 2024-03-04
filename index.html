@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio #21</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Vinculación del archivo CSS -->
+  </head>
+  <body>
+    <!-- Contenedor principal para la tarjeta y la tabla -->
+    <div class="container">
+      <!-- Única tarjeta para el registro de toda la información del usuario -->
+      <div class="card">
+        <form id="formularioRegistro" class="myform">
+          <!-- Campos para información básica -->
+          <label for="nombre">Nombre Completo</label>
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Ingrese su nombre"
+            required
+          />
+
+          <label for="direccion">Dirección</label>
+          <input
+            type="text"
+            id="direccion"
+            placeholder="Ingrese su dirección"
+            required
+          />
+
+          <label for="correo">Email</label>
+          <input
+            type="email"
+            id="correo"
+            placeholder="ejemplo@correo.com"
+            required
+          />
+
+          <label for="fechaNacimiento">Fecha de Nacimiento</label>
+          <input type="date" id="fechaNacimiento" required />
+
+          <label for="objetivos">Objetivos Personales</label>
+          <textarea
+            id="objetivos"
+            placeholder="Sus objetivos personales"
+            required
+          ></textarea>
+
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+
+      <!-- División donde se mostrará la tabla de usuarios registrados -->
+      <div id="tablaUsuarios" class="tablaUsuarios"></div>
+    </div>
+
+    <script src="./main.js"></script>
+    <!-- Vinculación del archivo JavaScript -->
+  </body>
+</html>
